@@ -25,8 +25,8 @@ const form = document.getElementById('volunteerForm');
     			console.log(resultArray[i].displayLink);
 			var name = document.getElementById("name" + (i+1));
 			name.innerHTML = resultArray[i].displayLink; 
-			var display = document.getElementById("display" + (i+1));
-			display.innerHTML = resultArray[i].displayLink;
+			var website = document.getElementById("website" + (i+1));
+			website.innerHTML = resultArray[i].displayLink;
 		}                
 		    // Reset the form fields
             })
