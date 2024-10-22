@@ -17,8 +17,8 @@ const form = document.getElementById('volunteerForm');
                 //document.getElementById('content').innerHTML = `<p>Thank you for your submission!</p>`;
 		resetForm();
 		const resultArray = result.items;
-		console.log(result);
-		console.log(resultArray);
+		//console.log(result);
+		//console.log(resultArray);
 		for (let i = 0; i < resultArray.length; i++) {
     		console.log(resultArray[i].displayLink);
 		}                
