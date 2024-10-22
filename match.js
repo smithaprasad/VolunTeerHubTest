@@ -21,10 +21,12 @@ const form = document.getElementById('volunteerForm');
 		//console.log(resultArray);
 		const resultsTable = document.getElementById('resultsTable'); 
 		resultsTable.style.display = 'table';
-		for (let i = 0; i < resultArray.length; i++) {
+		for (let i = 0; i < 1; i++) {
     			console.log(resultArray[i].displayLink);
-			var cell = document.getElementById("cell1");
-			cell.innerHTML = "New Value"; 
+			var name1 = document.getElementById("name" + (i+1));
+			name1.innerHTML = resultArray[0].displayLink; 
+			var display1 = document.getElementById("display" + (i+1));
+			display1.innerHTML = resultArray[0].displayLink;
 		}                
 		    // Reset the form fields
             })
