@@ -4,22 +4,14 @@ const form = document.getElementById('volunteerForm');
     event.preventDefault(); // Prevent form submission
 
     const formData = new FormData(form);
-    const locationInput = formData.get('location');
-    const experienceSelect = formData.get('experience');
+    const location = formData.get('location');
+    const experience = formData.get('experience');
     const categories = formData.getAll('categories'); 
-    console.log(locationInput);    
-    console.log(experienceSelect);
-    console.log(categories);
-
-    const location = locationInput.value;
-    const experience = experienceSelect.value;
-    const selectedCategories = Array.from(categories)
-            .filter(checkbox => checkbox.checked)
-            .map(checkbox => checkbox.value);
-
     console.log(location);    
     console.log(experience);
-    console.log(selectedCategories);
+    console.log(categories);
 
+    const response = await fetch(`/search?location=${encodeURIComponent(location)}&experience=${encodeURIComponent(experience)}&categories=${categories.map(c => encodeURIComponent(c)).join('&categories=')}`);
+    const opportunities = await response.json();
 
   });
