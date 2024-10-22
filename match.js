@@ -33,7 +33,7 @@ const form = document.getElementById('volunteerForm');
 	    
 	const apiKey = 'AIzaSyC182BoQ5Y8xmYCKDQjQ0D5QIMfbXdScqs';
 	const searchEngineId = 'd180d7018dd9246dc';
-	const query = `${location} ${experience} ${categories}`;
+	const query = `${location} ${experience}`;
 	console.log(query);
    	const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&q=${encodeURIComponent(query)}`;
 	console.log(url);
