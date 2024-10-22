@@ -11,7 +11,7 @@ const form = document.getElementById('volunteerForm');
     console.log(experience);
     console.log(categories);
 
-     fetchVolunteerOpportunities(location, experience, selectedCategories)
+     fetchVolunteerOpportunities(location, experience, categories)
             .then(() => {
                 // Optionally show a success message
                 document.getElementById('content').innerHTML = `<p>Thank you for your submission!</p>`;
