@@ -43,6 +43,16 @@
         </form>
         <div id="results"></div> <!-- Results container -->
     </main>
-    <script src="match.js"></script>
+      <script>
+    document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('myForm');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevents the default form submission
+                console.log('Form submitted!');
+                // Handle the form data here
+            });
+        });
+
+      </script>
 </body>
 </html>
