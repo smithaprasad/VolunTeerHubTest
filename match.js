@@ -17,13 +17,13 @@ const form = document.getElementById('volunteerForm');
                 //document.getElementById('content').innerHTML = `<p>Thank you for your submission!</p>`;
 		resetForm();
 		const resultArray = result.items;
-		//console.log(result);
+		console.log(result);
 		//console.log(resultArray);
 		const resultsTable = document.getElementById('resultsTable'); 
 		resultsTable.style.display = 'table';
 		let c=1;    
 		for (let i = 0; i < resultArray.length; i++) {
-    			console.log(resultArray[i]);
+    			//console.log(resultArray[i]);
 			var organization = document.getElementById("org" + (c));
 			organization.innerHTML = resultArray[i].title; 
 			var desc = document.getElementById("desc" + (c));
