@@ -14,7 +14,7 @@ const form = document.getElementById('volunteerForm');
      fetchVolunteerOpportunities(location, experience, categories)
             .then(() => {
                 // Optionally show a success message
-                document.getElementById('content').innerHTML = `<p>Thank you for your submission!</p>`;
+                //document.getElementById('content').innerHTML = `<p>Thank you for your submission!</p>`;
 
                 // Reset the form fields
                 resetForm();
