@@ -27,24 +27,19 @@ const form = document.getElementById('volunteerForm');
   });
 
   // Fetch volunteer opportunities from the google
-    async function fetchVolunteerOpportunities2(location, experience, categories) {
-	 const apiKey = 'AIzaSyC182BoQ5Y8xmYCKDQjQ0D5QIMfbXdScqs';
+    async function fetchVolunteerOpportunities(location, experience, categories) {
+	//const response = await fetch(`https://www.google.com/search?location=${encodeURIComponent(location)}&experience=${encodeURIComponent(experience)}&categories=${categories.map(c => encodeURIComponent(c)).join('&categories=')}`);
+	//const opportunities = await response.json();
+	    
+	const apiKey = 'AIzaSyC182BoQ5Y8xmYCKDQjQ0D5QIMfbXdScqs';
 	const searchEngineId = 'd180d7018dd9246dc';
 	const query = `${location} ${experience}`;
 	console.log(query);
    	const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&q=${encodeURIComponent(query)}`;
 	console.log(url);
 	const response = await fetch(url);
-	console.log(response);
+	const opportunities = await response.json();    
+	console.log(opportunities);
 
     }
 
-// Fetch volunteer opportunities from the google
-    async function fetchVolunteerOpportunities(location, experience, categories) {
-        console.log('Fetching volunteer opportunities');
-        const response = await fetch(`https://www.google.com/search?location=${encodeURIComponent(location)}&experience=${encodeURIComponent(experience)}&categories=${categories.map(c => encodeURIComponent(c)).join('&categories=')}`);
-        const opportunities = await response.json();
-
-        console.log('Fetched Opportunities:', opportunities);
-
-    }
