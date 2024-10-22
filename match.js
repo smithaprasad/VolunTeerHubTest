@@ -16,19 +16,6 @@ document.getElementById('volunteerForm').addEventListener('submit', function(eve
         console.log('Location:', location);
         console.log('Experience:', experience);
         console.log('Selected Categories:', selectedCategories);
-            
-            fetchVolunteerOpportunities(location, experience, selectedCategories)
-            .then(() => {
-                document.getElementById('content').innerHTML = `<p>Thank you for your submission!</p>`;
-                resetForm();
-            })
-            .catch(error => {
-                console.error('Error fetching volunteer opportunities:', error);
-            });
-
-            return false;
-
-
 });
 
  function resetForm() {
