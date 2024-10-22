@@ -5,5 +5,10 @@ const form = document.getElementById('volunteerForm');
 
     const formData = new FormData(form);
     const locationInput = formData.get('location');
-    console.log(locationInput);
+    const experienceInput = formData.get('experience');
+    const categoriesInput = formData.getAll('categories'); // Get all values of 'fruits'
+    console.log(locationInput);    
+    console.log(experienceInput);
+    console.log(categoriesInput);
+
   });
