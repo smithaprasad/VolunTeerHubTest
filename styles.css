@@ -136,5 +136,15 @@ form {
     background-color: #3e8e41; /* Even darker green when pressed */
 }
 
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-checkbox input {
+  display: none; /* Hide the default checkbox */
+}
+
 
 /* End top navigation bar */
