@@ -7,9 +7,9 @@ const form = document.getElementById('volunteerForm');
     const location = formData.get('location');
     const experience = formData.get('experience');
     const categories = formData.getAll('categories'); 
-    console.log(location);    
-    console.log(experience);
-    console.log(categories);
+    //console.log(location);    
+    //console.log(experience);
+    //console.log(categories);
 
      fetchVolunteerOpportunities(location, experience, categories)
             .then(result => {
@@ -39,11 +39,11 @@ const form = document.getElementById('volunteerForm');
 	const apiKey = 'AIzaSyC182BoQ5Y8xmYCKDQjQ0D5QIMfbXdScqs';
 	const searchEngineId = 'd180d7018dd9246dc';
 	const query = `${location} ${experience}`;
-	console.log(query);
+	//console.log(query);
    	const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&q=${encodeURIComponent(query)}`;
 	//const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&location=${encodeURIComponent(location)}&experience=${encodeURIComponent(experience)}&categories=${categories.map(c => encodeURIComponent(c)).join('&categories=')}`);
 
-	console.log(url);
+	//console.log(url);
 	const response = await fetch(url);
 	const opportunities = await response.json();
 	;
