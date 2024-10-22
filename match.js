@@ -20,7 +20,7 @@ const form = document.getElementById('volunteerForm');
 		console.log(result);
 		console.log(resultArray);
 		for (let i = 0; i < resultArray.length; i++) {
-    		console.log(resultArray[i]);
+    		console.log(resultArray[i].displayLink);
 		}                
 		    // Reset the form fields
             })
