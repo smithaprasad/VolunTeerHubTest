@@ -17,7 +17,11 @@ const form = document.getElementById('volunteerForm');
             .filter(checkbox => checkbox.checked)
             .map(checkbox => checkbox.value);
 
-    const response = await fetch(`/search?location=${encodeURIComponent(location)}&experience=${encodeURIComponent(experience)}&categories=${categories.map(c => encodeURIComponent(c)).join('&categories=')}`);
+    console.log(location);    
+    console.log(experience);
+    console.log(selectedCategories);
+
+    const response = await fetch(`/search?location=${encodeURIComponent(location)}&experience=${encodeURIComponent(experience)}&categories=${selectedCategories.map(c => encodeURIComponent(c)).join('&categories=')}`);
     const opportunities = await response.json();
 
     console.log('Fetched Opportunities:', opportunities);
