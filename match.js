@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     alert('JavaScript is running'); // Confirm script load
-
+console.log('Form submission captured');
     const form = document.getElementById('volunteerForm');
     const locationInput = document.getElementById('location');
     const experienceSelect = document.getElementById('experience');
