@@ -11,4 +11,10 @@ const form = document.getElementById('volunteerForm');
     console.log(experienceInput);
     console.log(categoriesInput);
 
+    const response = await fetch(`/search?location=${encodeURIComponent(location)}&experience=${encodeURIComponent(experience)}&categories=${categories.map(c => encodeURIComponent(c)).join('&categories=')}`);
+    const opportunities = await response.json();
+
+    console.log('Fetched Opportunities:', opportunities);
+    //displayOpportunities(opportunities);
+
   });
