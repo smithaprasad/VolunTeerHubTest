@@ -204,12 +204,13 @@ form {
 }
 
  select {
+            width: 300px; 
             padding: 10px;
             border: 2px solid #3498db;
             border-radius: 5px;
-            background-color: #f9f9f9;
+            background-color: #FFFFFF;
             font-size: 16px;
-            transition: border-color 0.3s ease;
+            transition: border-color 0.3s;
         }
 
         /* Change border color on focus */
