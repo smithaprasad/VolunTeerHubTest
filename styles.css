@@ -177,4 +177,11 @@ form {
   transform: rotate(45deg); /* Rotate to make a checkmark */
 }
 
+.form-label {
+    font-weight: bold;
+    color: #007BFF;
+    margin-top: 10px;
+    display: inline-block; /* keeps it inline with the input */
+}
+
 /* End top navigation bar */
