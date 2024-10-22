@@ -23,7 +23,7 @@ const form = document.getElementById('volunteerForm');
 		resultsTable.style.display = 'table';
 		let c=1;    
 		for (let i = 0; i < resultArray.length; i++) {
-    			console.log(resultArray[i].displayLink);
+    			console.log(resultArray[i]);
 			var name = document.getElementById("name" + (c));
 			name.innerHTML = resultArray[i].displayLink; 
 			var website = document.getElementById("website" + (c));
