@@ -42,7 +42,7 @@ const form = document.getElementById('volunteerForm');
 // Fetch volunteer opportunities from the google
     async function fetchVolunteerOpportunities(location, experience, categories) {
         console.log('Fetching volunteer opportunities');
-        const response = await fetch(`/search?location=${encodeURIComponent(location)}&experience=${encodeURIComponent(experience)}&categories=${categories.map(c => encodeURIComponent(c)).join('&categories=')}`);
+        const response = await fetch(`https://www.google.com/search?location=${encodeURIComponent(location)}&experience=${encodeURIComponent(experience)}&categories=${categories.map(c => encodeURIComponent(c)).join('&categories=')}`);
         const opportunities = await response.json();
 
         console.log('Fetched Opportunities:', opportunities);
