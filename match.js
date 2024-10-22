@@ -17,7 +17,9 @@ const form = document.getElementById('volunteerForm');
 	const query = `${location} ${experience}`;
 
 	  console.log(query);
-    
+   	const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&q=${encodeURIComponent(query)}`;
+
+	  console.log(url);
 	
 
   });
