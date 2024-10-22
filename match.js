@@ -24,10 +24,10 @@ const form = document.getElementById('volunteerForm');
 		let c=1;    
 		for (let i = 0; i < resultArray.length; i++) {
     			console.log(resultArray[i]);
-			var website = document.getElementById("name" + (c));
-			website.innerHTML = resultArray[i].displayLink; 
-			var title = document.getElementById("title" + (c));
-			title.innerHTML = resultArray[i].title;
+			var organization = document.getElementById("name" + (c));
+			organization.innerHTML = resultArray[i].title; 
+			var desc = document.getElementById("title" + (c));
+			title.innerHTML = resultArray[i].htmlSnippet;
 			var link = document.getElementById("website" + (c));
 			link.innerHTML = resultArray[i].link;
 			++c;
