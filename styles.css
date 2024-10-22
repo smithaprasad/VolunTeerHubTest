@@ -203,4 +203,24 @@ form {
     opacity: 1; /* Ensure the placeholder is fully opaque */
 }
 
+ select {
+            padding: 10px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        /* Change border color on focus */
+        select:focus {
+            border-color: #3e8e41;
+            outline: none; /* Remove the default outline */
+        }
+
+        /* Styling options (may vary by browser) */
+        option {
+            padding: 10px; /* This may not always apply */
+        }
+
 /* End top navigation bar */
