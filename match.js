@@ -15,10 +15,14 @@ const form = document.getElementById('volunteerForm');
             .then(result => {
                 // Optionally show a success message
                 //document.getElementById('content').innerHTML = `<p>Thank you for your submission!</p>`;
-		console.log("here");
+		resetForm();
+		const resultArray = result.items;
 		console.log(result);
-                // Reset the form fields
-                resetForm();
+		console.log(resultArray);
+		for (let i = 0; i < resultArray.length; i++) {
+    		console.log(resultArray[i]);
+		}                
+		    // Reset the form fields
             })
             .catch(error => {
                 console.error('Error fetching volunteer opportunities:', error);
