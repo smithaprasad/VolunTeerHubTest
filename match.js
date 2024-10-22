@@ -21,12 +21,14 @@ const form = document.getElementById('volunteerForm');
 		//console.log(resultArray);
 		const resultsTable = document.getElementById('resultsTable'); 
 		resultsTable.style.display = 'table';
+		int c=1;    
 		for (let i = 0; i < resultArray.length; i++) {
     			console.log(resultArray[i].displayLink);
-			var name = document.getElementById("name" + (i+1));
+			var name = document.getElementById("name" + (c));
 			name.innerHTML = resultArray[i].displayLink; 
-			var website = document.getElementById("website" + (i+1));
+			var website = document.getElementById("website" + (c));
 			website.innerHTML = resultArray[i].displayLink;
+			++c;
 		}                
 		    // Reset the form fields
             })
