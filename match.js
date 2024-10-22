@@ -29,7 +29,16 @@ const form = document.getElementById('volunteerForm');
 			var desc = document.getElementById("desc" + (c));
 			desc.innerHTML = resultArray[i].htmlSnippet;
 			var link = document.getElementById("link" + (c));
-			link.innerHTML = resultArray[i].link;
+			//link.innerHTML = resultArray[i].link;
+
+			const customlink = document.createElement("a");
+			customlink.href = "https://www.example.com"; // Set the URL
+			customlink.textContent = "Visit Example"; // Set the link text
+			customlink.target = "_blank"; // Optional: open in a new tab
+			
+			// Append the link to the selected cell
+			link.appendChild(customlink);
+			
 			++c;
 		}                
 		    // Reset the form fields
