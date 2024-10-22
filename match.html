@@ -45,7 +45,11 @@
     </main>
       <script>
     document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('myForm');
+            const form = document.getElementById('volunteerForm');
+        console.log('Form submission captured');
+        console.log('Location:', location);
+        console.log('Experience:', experience);
+        console.log('Selected Categories:', selectedCategories);
             form.addEventListener('submit', function(event) {
                 event.preventDefault(); // Prevents the default form submission
                 console.log('Form submitted!');
