@@ -39,9 +39,9 @@ const form = document.getElementById('volunteerForm');
 	const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&location=${encodeURIComponent(location)}&experience=${encodeURIComponent(experience)}&categories=${categories.map(c => encodeURIComponent(c)).join('&categories=')}`);
 
 	console.log(url);
-	const response = await fetch(url);
-	const opportunities = await response.json();    
-	console.log(opportunities);
+	//const response = await fetch(url);
+	//const opportunities = await response.json();    
+	//console.log(opportunities);
 
     }
 
