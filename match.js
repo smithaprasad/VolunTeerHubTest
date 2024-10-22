@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('volunteerForm');
-
+    
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the default form submission
 
         // Collect the form data
         const location = document.getElementById('location').value;
+        console.log(location);
         const experience = document.getElementById('experience').value;
         const interests = [];
         
