@@ -22,7 +22,9 @@ const form = document.getElementById('volunteerForm');
 		const resultsTable = document.getElementById('resultsTable'); 
 		resultsTable.style.display = 'table';
 		for (let i = 0; i < resultArray.length; i++) {
-    		console.log(resultArray[i].displayLink);
+    			console.log(resultArray[i].displayLink);
+			var cell = document.getElementById("cell1");
+			cell.innerHTML = "New Value"; 
 		}                
 		    // Reset the form fields
             })
