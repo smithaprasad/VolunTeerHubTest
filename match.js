@@ -11,7 +11,6 @@ const form = document.getElementById('volunteerForm');
     console.log(experience);
     console.log(categories);
 
-    const response = await fetch(`/search?location=${encodeURIComponent(location)}&experience=${encodeURIComponent(experience)}&categories=${categories.map(c => encodeURIComponent(c)).join('&categories=')}`);
-    const opportunities = await response.json();
+   
 
   });
