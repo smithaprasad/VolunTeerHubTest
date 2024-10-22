@@ -15,6 +15,7 @@ const form = document.getElementById('volunteerForm');
             .then(result => {
                 // Optionally show a success message
                 //document.getElementById('content').innerHTML = `<p>Thank you for your submission!</p>`;
+		console.log("here");
 		console.log(result);
                 // Reset the form fields
                 resetForm();
