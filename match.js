@@ -27,7 +27,7 @@ const form = document.getElementById('volunteerForm');
   });
 
   // Fetch volunteer opportunities from the google
-    async function fetchVolunteerOpportunities(location, experience, categories) {
+    async function fetchVolunteerOpportunities2(location, experience, categories) {
 	 const apiKey = 'AIzaSyC182BoQ5Y8xmYCKDQjQ0D5QIMfbXdScqs';
 	const searchEngineId = 'd180d7018dd9246dc';
 	const query = `${location} ${experience}`;
@@ -36,5 +36,15 @@ const form = document.getElementById('volunteerForm');
 	console.log(url);
 	const response = await fetch(url);
 	console.log(response);
+
+    }
+
+// Fetch volunteer opportunities from the google
+    async function fetchVolunteerOpportunities(location, experience, categories) {
+        console.log('Fetching volunteer opportunities');
+        const response = await fetch(`/search?location=${encodeURIComponent(location)}&experience=${encodeURIComponent(experience)}&categories=${categories.map(c => encodeURIComponent(c)).join('&categories=')}`);
+        const opportunities = await response.json();
+
+        console.log('Fetched Opportunities:', opportunities);
 
     }
