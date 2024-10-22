@@ -27,7 +27,7 @@ const form = document.getElementById('volunteerForm');
 			var organization = document.getElementById("org" + (c));
 			organization.innerHTML = resultArray[i].title; 
 			var desc = document.getElementById("desc" + (c));
-			title.innerHTML = resultArray[i].htmlSnippet;
+			desc.innerHTML = resultArray[i].htmlSnippet;
 			var link = document.getElementById("link" + (c));
 			link.innerHTML = resultArray[i].link;
 			++c;
