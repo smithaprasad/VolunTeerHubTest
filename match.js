@@ -15,13 +15,9 @@ const form = document.getElementById('volunteerForm');
 	const searchEngineId = 'd180d7018dd9246dc';
 	//const query = 'John Doe';
 	const query = `${location} ${experience}`;
-    
-	const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&q=${encodeURIComponent(query)}`;
- 	const response = await fetch(url);
 
-        const opportunities = await response.json();
-        
-        // Log fetched opportunities for debugging
-        console.log('Fetched Opportunities:', opportunities);
+	  console.log(query);
+    
+	
 
   });
