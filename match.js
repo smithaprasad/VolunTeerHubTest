@@ -11,16 +11,30 @@ const form = document.getElementById('volunteerForm');
     console.log(experience);
     console.log(categories);
 
-   const apiKey = 'AIzaSyC182BoQ5Y8xmYCKDQjQ0D5QIMfbXdScqs';
-	const searchEngineId = 'd180d7018dd9246dc';
-	//const query = 'John Doe';
-	const query = `${location} ${experience}`;
+     fetchVolunteerOpportunities(location, experience, selectedCategories)
+            .then(() => {
+                // Optionally show a success message
+                document.getElementById('content').innerHTML = `<p>Thank you for your submission!</p>`;
 
-	  console.log(query);
-   	const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&q=${encodeURIComponent(query)}`;
-	console.log(url);
-	const response = await fetch(url);
-	console.log(response);  
+                // Reset the form fields
+                resetForm();
+            })
+            .catch(error => {
+                console.error('Error fetching volunteer opportunities:', error);
+            });
 	
 
   });
+
+  // Fetch volunteer opportunities from the google
+    async function fetchVolunteerOpportunities(location, experience, categories) {
+	 const apiKey = 'AIzaSyC182BoQ5Y8xmYCKDQjQ0D5QIMfbXdScqs';
+	const searchEngineId = 'd180d7018dd9246dc';
+	const query = `${location} ${experience}`;
+	console.log(query);
+   	const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&q=${encodeURIComponent(query)}`;
+	console.log(url);
+	const response = await fetch(url);
+	console.log(response);
+
+    }
