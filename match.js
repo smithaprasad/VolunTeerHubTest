@@ -9,7 +9,7 @@ const form = document.getElementById('volunteerForm');
     const categories = formData.getAll('categories'); 
     console.log(locationInput);    
     console.log(experienceSelect);
-    console.log(categoriesInput);
+    console.log(categories);
 
     const location = locationInput.value;
     const experience = experienceSelect.value;
