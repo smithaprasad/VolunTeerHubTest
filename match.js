@@ -18,8 +18,9 @@ const form = document.getElementById('volunteerForm');
 
 	  console.log(query);
    	const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&q=${encodeURIComponent(query)}`;
-
-	  console.log(url);
+	console.log(url);
+	const opportunities = await response.json();
+	console.log(opportunities);  
 	
 
   });
