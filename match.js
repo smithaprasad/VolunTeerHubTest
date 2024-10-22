@@ -19,8 +19,8 @@ const form = document.getElementById('volunteerForm');
 		const resultArray = result.items;
 		//console.log(result);
 		//console.log(resultArray);
-		const resultTable = document.getElementById('resultTable'); 
-		resultTable.style.display = 'table';
+		const resultsTable = document.getElementById('resultsTable'); 
+		resultsTable.style.display = 'table';
 		for (let i = 0; i < resultArray.length; i++) {
     		console.log(resultArray[i].displayLink);
 		}                
