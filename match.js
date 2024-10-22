@@ -3,19 +3,10 @@ document.getElementById('volunteerForm').addEventListener('submit', function(eve
             console.log('Form submitted!');
 
             const locationInput = document.getElementById('location');
-            const experienceSelect = document.getElementById('experience');
-            const categories = document.querySelectorAll('.categories input[type="checkbox"]');
-
-            const location = locationInput.value;
-            const experience = experienceSelect.value;
-            const selectedCategories = Array.from(categories)
-            .filter(checkbox => checkbox.checked)
-            .map(checkbox => checkbox.value);
+           
 
         console.log('Form submission captured');
         console.log('Location:', location);
-        console.log('Experience:', experience);
-        console.log('Selected Categories:', selectedCategories);
 });
 
  function resetForm() {
