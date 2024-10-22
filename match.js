@@ -35,7 +35,9 @@ const form = document.getElementById('volunteerForm');
 	const searchEngineId = 'd180d7018dd9246dc';
 	const query = `${location} ${experience}`;
 	console.log(query);
-   	const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&q=${encodeURIComponent(query)}`;
+   	//const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&q=${encodeURIComponent(query)}`;
+	const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&location=${encodeURIComponent(location)}&experience=${encodeURIComponent(experience)}&categories=${categories.map(c => encodeURIComponent(c)).join('&categories=')}`);
+
 	console.log(url);
 	const response = await fetch(url);
 	const opportunities = await response.json();    
