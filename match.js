@@ -48,16 +48,11 @@ const form = document.getElementById('volunteerForm');
 	    
 	const apiKey = 'AIzaSyC182BoQ5Y8xmYCKDQjQ0D5QIMfbXdScqs';
 	const searchEngineId = 'd180d7018dd9246dc';
-	const query = `${location} ${experience}`;
-
-	const params = new URLSearchParams();
-	params.append(location);  
-	params.append(experience); 
-	categories.forEach(id => params.append('categories[]', id));
+	const categoryString = categories.join(' ');
+	const query = `${location} ${experience} ${categoryString}`;
 	    
-	//console.log(query);
-	const url = `https://www.googleapis.com/customsearch/v1?${params.toString()}&key=${apiKey}&cx=${searchEngineId}
-   	//const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&q=${encodeURIComponent(query)}`;
+	console.log(query);
+   	const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&q=${encodeURIComponent(query)}`;
 	//const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&location=${encodeURIComponent(location)}&experience=${encodeURIComponent(experience)}&categories=${categories.map(c => encodeURIComponent(c)).join('&categories=')}`);
 
 	//console.log(url);
