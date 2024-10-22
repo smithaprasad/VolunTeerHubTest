@@ -24,11 +24,11 @@ const form = document.getElementById('volunteerForm');
 		let c=1;    
 		for (let i = 0; i < resultArray.length; i++) {
     			console.log(resultArray[i]);
-			var organization = document.getElementById("name" + (c));
+			var organization = document.getElementById("org" + (c));
 			organization.innerHTML = resultArray[i].title; 
-			var desc = document.getElementById("title" + (c));
+			var desc = document.getElementById("desc" + (c));
 			title.innerHTML = resultArray[i].htmlSnippet;
-			var link = document.getElementById("website" + (c));
+			var link = document.getElementById("link" + (c));
 			link.innerHTML = resultArray[i].link;
 			++c;
 		}                
