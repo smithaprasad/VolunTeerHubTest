@@ -32,8 +32,8 @@ const form = document.getElementById('volunteerForm');
 			//link.innerHTML = resultArray[i].link;
 
 			const customlink = document.createElement("a");
-			customlink.href = "https://www.example.com"; // Set the URL
-			customlink.textContent = "Visit Example"; // Set the link text
+			customlink.href = resultArray[i].link; // Set the URL
+			customlink.textContent = resultArray[i].link; // Set the link text
 			customlink.target = "_blank"; // Optional: open in a new tab
 			
 			// Append the link to the selected cell
