@@ -21,7 +21,7 @@ const form = document.getElementById('volunteerForm');
 		//console.log(resultArray);
 		const resultsTable = document.getElementById('resultsTable'); 
 		resultsTable.style.display = 'table';
-		int c=1;    
+		let c=1;    
 		for (let i = 0; i < resultArray.length; i++) {
     			console.log(resultArray[i].displayLink);
 			var name = document.getElementById("name" + (c));
