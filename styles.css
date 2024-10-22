@@ -146,5 +146,35 @@ form {
   display: none; /* Hide the default checkbox */
 }
 
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007bff; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  position: relative;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: #007bff; /* Background color when checked */
+}
+
+.checkmark::after {
+  content: '';
+  position: absolute;
+  display: none; /* Hidden by default */
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  display: block; /* Show when checked */
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0; /* Create a checkmark */
+  transform: rotate(45deg); /* Rotate to make a checkmark */
+}
 
 /* End top navigation bar */
