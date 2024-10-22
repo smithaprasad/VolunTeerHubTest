@@ -1,3 +1,3 @@
 function submitclick() {
-    cosnole.log("here");
+    console.log("here");
 }
