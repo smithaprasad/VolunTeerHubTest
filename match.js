@@ -9,7 +9,7 @@ function submitclick() {
         console.log('Experience:', experience);
         console.log('Selected Categories:', selectedCategories);
 
-    fetchVolunteerOpportunities(location, experience, selectedCategories)
+    fetchVolunteerOpportunities(location, experience, categories)
         .then(() => {
             document.getElementById('content').innerHTML = `<p>Thank you for your submission!</p>`;
             resetForm();
