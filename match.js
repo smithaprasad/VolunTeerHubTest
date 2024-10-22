@@ -12,10 +12,10 @@ const form = document.getElementById('volunteerForm');
     console.log(categories);
 
      fetchVolunteerOpportunities(location, experience, categories)
-            .then(() => {
+            .then(result => {
                 // Optionally show a success message
                 //document.getElementById('content').innerHTML = `<p>Thank you for your submission!</p>`;
-
+		console.log(result);
                 // Reset the form fields
                 resetForm();
             })
@@ -40,8 +40,9 @@ const form = document.getElementById('volunteerForm');
 
 	console.log(url);
 	const response = await fetch(url);
-	const opportunities = await response.json();    
-	console.log(opportunities);
+	const opportunities = await response.json();
+	;
+	return opportunities;    
 
     }
 	
