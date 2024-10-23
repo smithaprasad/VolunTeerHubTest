@@ -30,6 +30,7 @@ const form = document.getElementById('volunteerForm');
 			desc.innerHTML = resultArray[i].htmlSnippet;
 			var link = document.getElementById("link" + (c));
 			//link.innerHTML = resultArray[i].link;
+			link.innerHTML = '';
 
 			const customlink = document.createElement("a");
 			customlink.href = resultArray[i].link; // Set the URL
